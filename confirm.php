@@ -6,10 +6,10 @@ layout('header');
 <!-- Content -->
 <main class="flex-1 p-5">
   <div class="max-w-5xl mx-auto">
-    <section class="text-center my-10">
-      <h1 class="text-4xl font-bold text-zinc-900">Pembayaran</h1>
-      <p class="mt-2 text-zinc-600">Pilih kaedah pembayaran anda untuk mengesahkan tempahan.</p>
-    </section>
+    <?php component('page-header', [
+      'page_title' => 'Pembayaran',
+      'page_description' => 'Pilih kaedah pembayaran anda untuk mengesahkan tempahan.'
+    ]); ?>
     <section class="max-w-[680px] mx-auto">
       <div class="rounded-lg border border-zinc-200 bg-zinc-100 overflow-hidden">
         <div class="rounded-lg bg-white p-6 ring ring-1 ring-zinc-200">
