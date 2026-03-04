@@ -4,6 +4,8 @@
     ]); ?>
     <form class="max-w-[680px] mx-auto">
       <?php component('form-studio'); ?>
+
+      <?php component('form-map'); ?>
       
       <?php component('form-section', [
         'form_title' => 'Pilih Tarikh',
