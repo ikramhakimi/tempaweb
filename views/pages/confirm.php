@@ -43,7 +43,7 @@
       <h3 class="text-lg font-semibold text-zinc-900">Kaedah Pembayaran</h3>
       <div class="grid md:grid-cols-2 gap-4 my-4">
         <!-- Deposit -->
-        <label class="block cursor-pointer">
+        <label class="block cursor-pointer relative">
           <input
             type="radio"
             name="payment_option"
@@ -53,41 +53,34 @@
           />
 
           <div class="
-            border border-zinc-200 bg-white rounded-lg p-5
+            border border-zinc-200 bg-white rounded-lg absolute top-0 right-0 w-full h-full
             transition-all duration-200
 
             hover:border-black hover:shadow-lg
 
-            peer-checked:bg-zinc-900
-            peer-checked:border-black
-            peer-checked:ring-2
-            peer-checked:ring-black
+            peer-checked:bg-blue-600
+            peer-checked:border-blue-800
             peer-checked:shadow-xl
-          ">
-            <div class="flex justify-between items-start mb-3">
-              <div>
-                <h3 class="text-lg font-semibold">Deposit</h3>
-                <p class="text-2xl font-bold mt-1">RM 50</p>
-              </div>
-              <div class="w-5 h-5 rounded-full border-2 border-zinc-300
+          "></div>
+          <h3 class="relative mx-5 mt-5 text-lg text-zinc-600 font-semibold peer-checked:text-white/60">Deposit</h3>
+          <p class="relative mx-5 text-2xl text-zinc-900 font-bold mt-1 mb-3 peer-checked:text-white">RM 50</p>
+
+          <p class="relative mx-5 text-sm text-zinc-600 mb-3 peer-checked:text-white/60">
+            50% sekarang · 50% pada hari sesi
+          </p>
+
+          <p class="relative mx-5 mb-5 text-sm text-zinc-500 leading-relaxed peer-checked:text-white">
+            Bayar deposit untuk menempah studio anda. 
+            Baki bayaran perlu dijelaskan semasa hari sesi.
+          </p>
+          
+          <div class="w-5 h-5 rounded-full border-2 border-zinc-200 absolute top-0 right-0 m-4
                           peer-checked:border-4 
-                          peer-checked:border-black 
-                          peer-checked:bg-black transition"></div>
-            </div>
-
-            <p class="text-sm text-zinc-600 mb-3">
-              50% sekarang · 50% pada hari sesi
-            </p>
-
-            <p class="text-sm text-zinc-500 leading-relaxed">
-              Bayar deposit untuk menempah studio anda. 
-              Baki bayaran perlu dijelaskan semasa hari sesi.
-            </p>
-          </div>
+                          peer-checked:border-white transition"></div>
         </label>
 
         <!-- Bayaran Penuh -->
-        <label class="block cursor-pointer">
+        <label class="block cursor-pointer relative">
           <input
             type="radio"
             name="payment_option"
@@ -96,39 +89,30 @@
           />
 
           <div class="
-            border border-zinc-200 bg-white rounded-lg p-5
+            border border-zinc-200 bg-white rounded-lg absolute top-0 right-0 w-full h-full
             transition-all duration-200
 
             hover:border-black hover:shadow-lg
 
-            peer-checked:bg-zinc-900
-            peer-checked:border-black
-            peer-checked:ring-2
-            peer-checked:ring-black
+            peer-checked:bg-blue-600
+            peer-checked:border-blue-800
             peer-checked:shadow-xl
-          ">
-            <div class="flex justify-between items-start mb-3">
-              <div>
-                <h3 class="text-lg font-semibold">Bayaran Penuh</h3>
-                <p class="text-2xl 
-                          font-bold 
-                          peer-checked:text-zinc-300
-                          mt-1">RM 180</p>
-              </div>
-              <div class="w-5 h-5 rounded-full border-2 border-zinc-300 
-                          peer-checked:border-black 
-                          peer-checked:bg-black transition"></div>
-            </div>
+          "></div>
+          <h3 class="relative mx-5 mt-5 text-lg text-zinc-600 font-semibold peer-checked:text-white/60">Bayaran Penuh</h3>
+          <p class="relative mx-5 text-2xl text-zinc-900 font-bold mt-1 mb-3 peer-checked:text-white">RM 180</p>
 
-            <p class="text-sm text-zinc-600 mb-3">
-              Bayar sekali, tanpa risau
-            </p>
+          <p class="relative mx-5 text-sm text-zinc-600 mb-3 peer-checked:text-white/60">
+            Bayar sekali, tanpa risau
+          </p>
 
-            <p class="text-sm text-gray-500 leading-relaxed">
-              Buat bayaran penuh hari ini dan nikmati keutamaan jadual 
-              serta frame digital percuma.
-            </p>
-          </div>
+          <p class="relative mx-5 mb-5 text-sm text-zinc-500 leading-relaxed peer-checked:text-white">
+            Buat bayaran penuh hari ini dan nikmati keutamaan jadual 
+            serta frame digital percuma.
+          </p>
+          
+          <div class="w-5 h-5 rounded-full border-2 border-zinc-200 absolute top-0 right-0 m-4
+                          peer-checked:border-4 
+                          peer-checked:border-white transition"></div>
         </label>
       </div>
       <a href="confirm.php" class="block w-full rounded-md bg-zinc-900 px-4 py-3 font-medium text-white text-center transition hover:bg-indigo-600">
