@@ -15,4 +15,7 @@ function component($file, $data = []) {
     include __DIR__ . "/../views/components/$file.php";
 }
 
+function asset($path = '') {
+    return BASE_PATH . '/assets/' . ltrim($path, '/');
+}
 ?>

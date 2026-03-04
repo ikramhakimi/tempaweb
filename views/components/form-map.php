@@ -10,9 +10,9 @@ $address = "B-3-3, Holiday Place, Jln Ampang, Taman U Thant, 55000 Kuala Lumpur"
   
 
   <!-- Info -->
-  <div class="mt-6 bg-white rounded-xl border border-zinc-200">
+  <div class="mt-6 bg-white rounded-lg border border-zinc-200">
     <!-- Map -->
-    <div class="aspect-[4/2] rounded-lg ring-1 ring-zinc-200 overflow-hidden m-1">
+    <div class="aspect-[4/1] rounded-md ring-1 ring-zinc-200 overflow-hidden m-1">
         <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.762911834007!2d101.72659049339293!3d3.157095627775691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc383a007d2ed1%3A0x9df725ba7608571b!2sHoliday%20Place%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1772628830950!5m2!1sen!2smy"
         class="w-full h-full"
