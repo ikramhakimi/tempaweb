@@ -1,11 +1,3 @@
-<?php 
-require __DIR__ . '/includes/functions.php';
-
-layout('header'); 
-?>
-<!-- Content -->
-<main class="flex-1 p-6">
-  <div class="max-w-5xl mx-auto">
     <?php component('page-header', [
       'page_title' => 'Jadualkan Sesi Anda',
       'page_description' => 'Pilih tarikh, slot masa, dan jumlah kehadiran yang anda inginkan.'
@@ -38,12 +30,8 @@ layout('header');
       ]); ?>
 
       <div class="border-t border-zinc-200 mt-6 pt-6">
-        <a href="confirm.php" class="block w-full rounded-md bg-zinc-900 px-4 py-3 font-medium text-white text-center transition hover:bg-indigo-600">
+        <a href="<?= url('confirm') ?>" class="block w-full rounded-md bg-zinc-900 px-4 py-3 font-medium text-white text-center transition hover:bg-indigo-600">
           Sahkan Tempahan
         </a> 
       </div>
     </form>
-  </div>
-</main>
-
-<?php layout('footer'); ?>

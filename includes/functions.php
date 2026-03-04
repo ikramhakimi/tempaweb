@@ -1,5 +1,11 @@
 <?php
 
+define('BASE_PATH', '/tempaweb');
+
+function url($path = '') {
+    return BASE_PATH . '/' . ltrim($path, '/');
+}
+
 function layout($file) {
     include __DIR__ . "/../views/layout/$file.php";
 }

@@ -14,7 +14,7 @@
             <li>1–10 pax</li>
             <li>15 minit setiap slot</li>
         </ul>
-        <a href="booking.php" class="block w-full rounded-md bg-zinc-900 px-4 py-3 mt-5 font-medium text-white transition hover:bg-indigo-600">
+        <a href="<?= url('booking') ?>" class="block w-full rounded-md bg-zinc-900 px-4 py-3 mt-5 font-medium text-white transition hover:bg-indigo-600">
         Tempah Sekarang
         </a>
     </div>

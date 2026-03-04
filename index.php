@@ -1,37 +1,27 @@
-<?php 
-require __DIR__ . '/includes/functions.php';
+<?php
 
-layout('header'); 
-?>
-<!-- Content -->
-<main class="flex-1 p-6">
-  <div class="max-w-5xl mx-auto">
-    <?php component('page-header', [
-      'page_title' => 'Pilih Tema Anda',
-      'page_description' => 'Setiap tema direka khas untuk memberikan pengalaman studio Raya yang unik dan berkesan.'
-    ]); ?>
-    
-    <section class="grid grid-cols-1 md:grid-cols-6 gap-5">
-      <!-- Cards -->
-      <div class="md:col-span-2">
-        <?php component('card-theme'); ?>
-      </div>
-      <div class="md:col-span-2">
-        <?php component('card-theme'); ?>
-      </div>
-      <div class="md:col-span-2">
-        <?php component('card-theme'); ?>
-      </div>
-      <div class="md:col-span-2">
-        <?php component('card-theme'); ?>
-      </div>
-      <div class="md:col-span-2">
-        <?php component('card-theme'); ?>
-      </div>
-      <div class="md:col-span-2">
-        <?php component('card-theme'); ?>
-      </div>
-    </section>
-  </div>
-</main>
-<?php layout('footer'); ?>
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once __DIR__ . '/includes/functions.php';
+
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+$uri = str_replace(BASE_PATH, '', $uri);
+
+if ($uri === '' || $uri === '/') {
+    $uri = '/home';
+}
+
+$page = __DIR__ . '/views/pages' . $uri . '.php';
+
+if (!file_exists($page)) {
+    http_response_code(404);
+    $page = __DIR__ . '/views/pages/404.php';
+}
+
+ob_start();
+require $page;
+$content = ob_get_clean();
+
+require __DIR__ . '/layout.php';
